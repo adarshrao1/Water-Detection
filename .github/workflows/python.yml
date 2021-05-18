@@ -14,14 +14,29 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Lint with flake8
-      run: |
-        conda install flake8
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        conda install pytest
-        pytest
+    - name: Install Python dependencies
+      uses: py-actions/py-dependency-install@v2
+      
+    - name: Check code meets quality standards
+      uses: actions/checkout@v1
+      
+    - name: Check code meets quality standards
+      uses: ricardochaves/python-lint@v1.4.0
+
+    - name: wemake-python-styleguide
+      uses: wemake-services/wemake-python-styleguide@0.15.2
+      
+    - name: code-inspector
+      id: code-inspector
+      uses: codeinspectorio/github-action@master
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        code_inspector_access_key: ${{ secrets.CODE_INSPECTOR_ACCESS_KEY }}
+        code_inspector_secret_key: ${{ secrets.CODE_INSPECTOR_SECRET_KEY }}
+        min_quality_grade: 'WARNING'
+        min_quality_score: '50'
+        max_defects_rate: '0.0001'
+        max_complex_functions_rate: '0.0001'
+        max_long_functions_rate: '0.0001'
+        project_name: ''
+        max_timeout_sec: '600'
