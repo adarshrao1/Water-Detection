@@ -1,0 +1,4 @@
+fastai
+wandb
+opencv-python
+matplotlib
