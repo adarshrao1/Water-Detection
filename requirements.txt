@@ -1,4 +1,5 @@
-fastai>2
+fastai.fastai
 wandb
-opencv-python>4
+opencv-python
 matplotlib
+torch
