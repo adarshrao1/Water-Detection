@@ -74,18 +74,18 @@ path = './images'
 try:
     file_list = os.listdir(path)
 except:
-    print 'Directory not found.\nPlease copy the input images to the newly created images folder for prediction.'
+    print ('Directory not found.\nPlease copy the input images to the newly created images folder for prediction.')
     os.mkdir(path)
     exit = 1
 
 if not file_list:
-    print 'No Images found.\nPlease copy the input images to the images folder for prediction.'
+    print ('No Images found.\nPlease copy the input images to the images folder for prediction.')
     exit = 1
 else:
     if len(file_list) == 1:
-        print 'Found ' + str(len(file_list)) + ' image.'
+        print ('Found ' + str(len(file_list)) + ' image.')
     else:
-        print 'Found ' + str(len(file_list)) + ' images.'
+        print ('Found ' + str(len(file_list)) + ' images.')
 
 if exit != 1:
 
