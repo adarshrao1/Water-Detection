@@ -1,5 +1,11 @@
-fastai/fastai
+fastai>=2.3
 wandb
-opencv/opencv-python
+opencv-python
+ruamel.yaml
 matplotlib
 torch
+numpy
+h5py
+pandas
+keras
+PIL
