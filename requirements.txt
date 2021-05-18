@@ -1,7 +1,7 @@
 fastai>=2.1.9
 wandb>=0.10.30
 opencv-python>=4.2.0.34
-matplotlib>-3.3.0rc1
+matplotlib>=3.3.0rc1
 torch>=1.5.1
 numpy>=1.19.0
 h5py>=2.10.0
