@@ -1,4 +1,4 @@
-# **Water-Detection**
+# **Water Detection using UNet Model**
 FastAI model for detecting water bodies in an image.
 
 **
