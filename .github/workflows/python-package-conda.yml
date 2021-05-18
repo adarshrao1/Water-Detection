@@ -9,8 +9,6 @@ jobs:
       max-parallel: 5
 
     steps:
-    - name: cuda-toolkit
-      uses: Jimver/cuda-toolkit@v0.2.1  
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
