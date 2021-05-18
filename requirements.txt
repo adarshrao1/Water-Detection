@@ -1,10 +1,10 @@
-fastai.fastai>=2.3
+fastai>=2.3
 wandb
 opencv-python
-ruamel.yaml
+yaml
 matplotlib
 torch
-numpy
+numpy>1.19
 h5py
 pandas
 keras
