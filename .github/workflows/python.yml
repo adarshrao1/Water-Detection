@@ -20,8 +20,8 @@ jobs:
     - name: Check code meets quality standards
       uses: actions/checkout@v1
       
-    - name: wemake-python-styleguide
-      uses: wemake-services/wemake-python-styleguide@0.15.2
+    #- name: wemake-python-styleguide
+    # uses: wemake-services/wemake-python-styleguide@0.15.2
       
     - name: code-inspector
       id: code-inspector
