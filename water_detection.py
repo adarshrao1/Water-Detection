@@ -1,11 +1,17 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 from fastai.vision.core import *
 from fastai.vision.data import *
 from fastai.vision.all import *
 from fastai.vision import *
 import fastai
-
+from PIL import Image
+from tqdm.notebook import tqdm as tqdm
+import numpy
+import matplotlib.image as mpimg
+import re
+import os
+from pathlib import Path
+import cv2
+import pathlib
 import matplotlib.pyplot as plt
 
 def label_func(x): return f'dataset/train_gt/{x.stem}.png'
@@ -52,21 +58,14 @@ learn = unet_learner(src, xresnet34_deep)  # .to_fp16()
 
 # Code to use colab pickled data in windows
 
-import pathlib
+
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
 learn = load_learner('export.pkl')
 
-from PIL import Image
-from tqdm.notebook import tqdm as tqdm
-import numpy
-import matplotlib.image as mpimg
-import re
-import os
-from pathlib import Path
-import cv2
-exit = 0
+
+exit1 = 0
 
 # Reading all image name
 
@@ -74,25 +73,24 @@ path = './images'
 try:
     file_list = os.listdir(path)
 except:
-    print ('Directory not found.\nPlease copy the input images to the newly created images folder for prediction.')
+    print('Directory not found.\nPlease copy the input images to the newly created images folder for prediction.')
     os.mkdir(path)
-    exit = 1
+    exit1 = 1
 
 if not file_list:
     print ('No Images found.\nPlease copy the input images to the images folder for prediction.')
-    exit = 1
+    exit1 = 1
 else:
     if len(file_list) == 1:
-        print ('Found ' + str(len(file_list)) + ' image.')
+        print('Found ' + str(len(file_list)) + ' image.')
     else:
-        print ('Found ' + str(len(file_list)) + ' images.')
+        print('Found ' + str(len(file_list)) + ' images.')
 
-if exit != 1:
+if exit1 != 1:
 
     # Sorting the image name
 
     file_list = sorted(file_list)
-    file_list
 
     # Intialize variables
 
