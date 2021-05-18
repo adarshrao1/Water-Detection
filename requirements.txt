@@ -1,4 +1,4 @@
-fastai>=2.3
+fastai.fastai>=2.3
 wandb
 opencv-python
 ruamel.yaml
@@ -8,4 +8,4 @@ numpy
 h5py
 pandas
 keras
-PIL
+PyYAML
