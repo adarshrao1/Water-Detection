@@ -1,7 +1,6 @@
 fastai>=2.3
 wandb
 opencv-python
-yaml
 matplotlib
 torch
 numpy>1.19
