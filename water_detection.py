@@ -1,10 +1,4 @@
-from fastai.vision.core import *
-from fastai.vision.data import *
-from fastai.vision.all import *
-from fastai.vision import *
-import fastai
 from PIL import Image
-from tqdm.notebook import tqdm as tqdm
 import numpy
 import matplotlib.image as mpimg
 import re
@@ -13,8 +7,17 @@ from pathlib import Path
 import cv2
 import pathlib
 import matplotlib.pyplot as plt
+import fastai
+from tqdm.notebook import tqdm as tqdm
+from fastai.vision.core import *
+from fastai.vision.data import *
+from fastai.vision.all import *
+from fastai.vision import *
 
-def label_func(x): return f'dataset/train_gt/{x.stem}.png'
+
+
+def label_func(x): 
+      return f'dataset/train_gt/{x.stem}.png'
 
 # Creating batches of images with their corresponding mask
 
@@ -73,12 +76,14 @@ path = './images'
 try:
     file_list = os.listdir(path)
 except:
-    print('Directory not found.\nPlease copy the input images to the newly created images folder for prediction.')
+    print('Directory not found.\nPlease copy the input '
+    'images to the newly created images folder for prediction.')
     os.mkdir(path)
     exit1 = 1
 
 if not file_list:
-    print ('No Images found.\nPlease copy the input images to the images folder for prediction.')
+    print('No Images found.\nPlease copy the input '
+    'images to the images folder for prediction.')
     exit1 = 1
 else:
     if len(file_list) == 1:
