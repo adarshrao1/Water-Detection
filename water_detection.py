@@ -2,9 +2,9 @@ import re
 import os
 from pathlib import Path
 import pathlib
+from tqdm.notebook import tqdm as tqdm
 import matplotlib.pyplot as plt
 import fastai
-from tqdm.notebook import tqdm as tqdm
 from PIL import Image
 import cv2
 import matplotlib.image as mpimg
