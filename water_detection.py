@@ -1,4 +1,3 @@
-import numpy
 import matplotlib.image as mpimg
 import re
 import os
@@ -9,6 +8,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import fastai
 from tqdm.notebook import tqdm as tqdm
+import numpy
 from fastai.vision.core import *
 from fastai.vision.data import *
 from fastai.vision.all import *
