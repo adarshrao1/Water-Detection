@@ -1,4 +1,3 @@
-from PIL import Image
 import numpy
 import matplotlib.image as mpimg
 import re
@@ -6,6 +5,7 @@ import os
 from pathlib import Path
 import cv2
 import pathlib
+from PIL import Image
 import matplotlib.pyplot as plt
 import fastai
 from tqdm.notebook import tqdm as tqdm
@@ -16,7 +16,7 @@ from fastai.vision import *
 
 
 
-def label_func(x): 
+def label_func(x):
       return f'dataset/train_gt/{x.stem}.png'
 
 # Creating batches of images with their corresponding mask
@@ -174,7 +174,8 @@ if exit1 != 1:
         # Calculate Binary data
 
         tuple1 = numpy.unique(numpydata, return_counts=True)
-        ele2 = [ele1 for ele1 in tuple1]
+        for ele1 in tuple1:
+            ele2 = ele1
         try:
             count0 = ele2[1][0]
             count1 = ele2[1][1]
