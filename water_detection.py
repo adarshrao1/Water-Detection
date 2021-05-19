@@ -27,8 +27,7 @@ src = SegmentationDataLoaders.from_label_func(  # the path of the folders
                                                 # Data Augumentation
                                                 # there are two classes, background and water
                                                 # set batch size to 4
-                                                # seeting 5% of data to validation ( i know it's low!)
-                                                # if on windows, don't change this!
+                                                # setting 5% of data to validation
     '',
     get_image_files('dataset/train_images'),
     label_func,
