@@ -2,11 +2,11 @@ import re
 import os
 from pathlib import Path
 import pathlib
-import cv2
 from PIL import Image
 import matplotlib.pyplot as plt
 import fastai
 from tqdm.notebook import tqdm as tqdm
+import cv2
 import matplotlib.image as mpimg
 import numpy
 from fastai.vision.core import *
