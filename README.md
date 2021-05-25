@@ -11,5 +11,5 @@ or by using `requirements.txt` file.
 
 Paste the images to `images` folder next to the notebook file.
 
-Training can be done by using image dataset. [Here](https://github.com/adarshrao1/image-dataset) is an example of a dataset.
+Training can be done by using image dataset. [Here](https://github.com/adarshrao1/image-dataset) is an example of an image dataset.
 
