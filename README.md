@@ -2,7 +2,7 @@
 FastAI model for detecting water bodies in an image.
 
 
-**Jupyter Notebook** version can be used either by training or exporting by pickled data.
+**Jupyter Notebook** version can be used either by training or by exporting pickled data.
 Install the requirements before executing the file, which can be done either by using the command :
 ```
 pip install fastai wandb opencv-python --user
