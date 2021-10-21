@@ -9,7 +9,7 @@ pip install fastai wandb opencv-python --user
 ```
 or by using `requirements.txt` file.
 
-Copy or move the required input `images` folder next to the notebook file.
+Copy or move the required input images to the `images` folder next to the notebook file.
 
 Training can be done using an image dataset. [Here](https://github.com/adarshrao1/image-dataset) is an example of an image dataset.
 
